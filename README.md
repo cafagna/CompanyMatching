@@ -10,7 +10,7 @@ Both tables have the following structure:
 
 | Column             | Description |
 |:-------------------|:------------|
-| `id`               | ID of the company entity or company profile. Careful: the entity IDs are different from the profile IDs, e.g. ID 4 in `company_entities` may refer to _Ericcson_ while ID 4 in `company_profiles` may refer to _Siemens_ |
+| `id`               | ID of the company entity or company profile. Careful: the entity IDs are different from the profile IDs, e.g. ID 4 in `company_entities` may refer to _Ericsson_ while ID 4 in `company_profiles` may refer to _Siemens_ |
 | `company_name`     | name of the company |
 | `website_url`      | URL that may link to the company website |
 | `foundation_year`  | year when the company was founded |
