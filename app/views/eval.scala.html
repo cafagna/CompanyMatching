@@ -1,0 +1,40 @@
+@import services.EvalResults
+@(results: EvalResults)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluation</title>
+    <style>
+    td, th {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    </style>
+</head>
+<body>
+
+  <h1>Stats about matching</h1>
+
+  <table style="border">
+      <tr>
+          <th>Fraction of company profiles for which at least one <i>correct</i> match was found</th>
+          <td>@{f"${results.fractionCorrect}%1.5f"}</td>
+      </tr>
+      <tr>
+          <th>Fraction of company profiles for which at least one <i>wrong</i> match was found</th>
+          <td>@{f"${results.fractionWrong}%1.5f"}</td>
+      </tr>
+      <tr>
+          <th>Fraction of company profiles for which a <i>best</i> match was found</th>
+          <td>@{f"${results.fractionBestMatchCorrect}%1.5f"}</td>
+      </tr>
+      <tr>
+          <th>Fraction of company profiles for which <i>no</i> match was found</th>
+          <td>@{f"${results.fractionNoMatch}%1.5f"}</td>
+      </tr>
+  </table>
+
+</body>
+</html>
